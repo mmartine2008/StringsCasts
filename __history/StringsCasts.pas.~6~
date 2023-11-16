@@ -38,11 +38,15 @@ end;
 
 function CastCharArrayToPAnsiChar(const arrayChar: array of Char): PAnsiChar;
 var
+  charArray: array of Char;
   pAnsiStr: PAnsiChar;
 begin
+  // Inicializa tu array de caracteres como desees
+  SetLength(charArray, 10);
+  // Llena el array con datos
 
   // Convierte el array de Char a PAnsiChar
-  result := PAnsiChar(string(arrayChar));
+  result := PAnsiChar(string(charArray));
 
 end;
 

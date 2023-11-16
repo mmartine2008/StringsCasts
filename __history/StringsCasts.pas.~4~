@@ -4,8 +4,6 @@ interface
 
 function CastAnsiCharArrayToWideChar(const AnsiArray: array of AnsiChar): PWideChar;
 function CastWideCharToAnsiChar(const wideStr: PWideChar): PAnsiChar;
-function CastCharArrayToPAnsiChar(const arrayChar: array of Char): PAnsiChar;
-
 
 implementation
 
@@ -34,16 +32,6 @@ begin
 
   // Convert the AnsiString to PAnsiChar
   Result := PAnsiChar(ansiStr);
-end;
-
-function CastCharArrayToPAnsiChar(const arrayChar: array of Char): PAnsiChar;
-var
-  pAnsiStr: PAnsiChar;
-begin
-
-  // Convierte el array de Char a PAnsiChar
-  result := PAnsiChar(string(arrayChar));
-
 end;
 
 end.
